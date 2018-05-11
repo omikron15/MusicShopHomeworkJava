@@ -1,5 +1,6 @@
 package item.instrument;
 
+import enums.InstrumentType;
 import item.Instrument;
 
 public class Piano extends Instrument {
@@ -7,7 +8,7 @@ public class Piano extends Instrument {
     private int noOfKeys;
 
     public Piano(String name, double stockPrice, double sellPrice, int noOfKeys) {
-        super(name, stockPrice, sellPrice);
+        super(name, stockPrice, sellPrice, InstrumentType.KEYBOARD);
         this.noOfKeys = noOfKeys;
     }
 
@@ -18,4 +19,5 @@ public class Piano extends Instrument {
     public int getnoOfKeys(){
         return this.noOfKeys;
     }
+
 }

@@ -1,3 +1,4 @@
+import enums.InstrumentType;
 import item.instrument.Guitar;
 import item.instrument.Piano;
 import org.junit.Before;
@@ -16,11 +17,17 @@ public class PianoTest {
 
     @Test
     public void getNoOfKeys() {
-        assertEquals(7, piano.getnoOfKeys());
+        assertEquals(48, piano.getnoOfKeys());
     }
 
     @Test
     public void playPiano() {
         assertEquals("Play Piano", piano.play());
     }
+
+    @Test
+    public void getType() {
+        assertEquals(InstrumentType.KEYBOARD, piano.getType());
+    }
+
 }
