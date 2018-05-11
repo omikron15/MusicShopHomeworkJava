@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 import shop.Shop;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class ShopTest {
@@ -52,6 +54,31 @@ public class ShopTest {
         assertEquals(1, shop.getStockCount());
     }
 
-    // list all instruments
-    //list all accessories
+    @Test
+    public void calculateShopPotentialProfit() {
+        shop.addStock(piano);
+        shop.addStock(guitar);
+        assertEquals(200, shop.calculateShopPotentialProfit(), 0.1);
+    }
+
+    @Test
+    public void listInstruments() {
+        shop.addStock(piano);
+        shop.addStock(guitar);
+        shop.addStock(accessory);
+        ArrayList<String> results;
+        results = shop.displayItemNames(shop.listInstruments());
+        assertEquals(2, results.size() );
+    }
+
+    @Test
+    public void listAccessories() {
+        shop.addStock(piano);
+        shop.addStock(guitar);
+        shop.addStock(accessory);
+        ArrayList<String> results;
+        results = shop.displayItemNames(shop.listAccessories());
+        assertEquals(1, results.size() );
+    }
+
 }
