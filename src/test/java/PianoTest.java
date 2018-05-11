@@ -18,4 +18,9 @@ public class PianoTest {
     public void getNoOfKeys() {
         assertEquals(7, piano.getnoOfKeys());
     }
+
+    @Test
+    public void playPiano() {
+        assertEquals("Play Piano", piano.play());
+    }
 }

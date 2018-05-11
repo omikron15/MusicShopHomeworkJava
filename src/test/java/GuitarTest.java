@@ -19,4 +19,9 @@ public class GuitarTest{
     public void getNoOfStrings() {
         assertEquals(7, guitar.getNoOfStrings());
     }
+
+    @Test
+    public void playguitar() {
+        assertEquals("Play Guitar", guitar.play());
+    }
 }
