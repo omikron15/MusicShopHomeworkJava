@@ -16,4 +16,5 @@ public class Accessory extends Item {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

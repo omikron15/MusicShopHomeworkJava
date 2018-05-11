@@ -1,10 +1,12 @@
 package item;
 
-public abstract class Item {
+import interfaces.ISell;
+
+public abstract class Item implements ISell {
 
     private String name;
-    private double sellPrice;
-    private double stockPrice;
+    protected double sellPrice;
+    protected double stockPrice;
 
     public Item(String name, double stockPrice, double sellPrice) {
         this.name = name;
@@ -26,5 +28,9 @@ public abstract class Item {
 
     public void setSellPrice(double sellPrice) {
         this.sellPrice = sellPrice;
+    }
+
+    public double calculateMarkup(){
+        return (this.sellPrice - this.stockPrice);
     }
 }

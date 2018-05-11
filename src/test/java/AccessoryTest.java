@@ -3,7 +3,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class AccessoryTest {
 
@@ -44,5 +43,10 @@ public class AccessoryTest {
     public void setDescription() {
         accessory1.setDescription("Special Drum Sticks");
         assertEquals("Special Drum Sticks", accessory1.getDescription());
+    }
+
+    @Test
+    public void calculateMarkup() {
+        assertEquals(2.50, accessory1.calculateMarkup(), 0.1);
     }
 }
