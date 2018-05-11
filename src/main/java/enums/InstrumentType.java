@@ -6,4 +6,5 @@ public enum InstrumentType {
     STRING,
     WOODWIND,
     KEYBOARD
+
 }
