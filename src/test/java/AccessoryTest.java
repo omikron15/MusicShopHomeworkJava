@@ -21,12 +21,12 @@ public class AccessoryTest {
 
     @Test
     public void getStockPrice() {
-        assertEquals(5.00, accessory1.getStockPrice());
+        assertEquals(5.00, accessory1.getStockPrice(), 0.5);
     }
 
     @Test
     public void getSellPrice() {
-        assertEquals(7.50, accessory1.getSellPrice());
+        assertEquals(7.50, accessory1.getSellPrice(), 0.5);
     }
 
     @Test
@@ -36,8 +36,8 @@ public class AccessoryTest {
 
     @Test
     public void setSellPrice() {
-        accessory1.setPrice(10.00);
-        assertEquals(10.00, accessory1.getSellPrice);
+        accessory1.setSellPrice(10.00);
+        assertEquals(10.00, accessory1.getSellPrice(), 0.5);
     }
 
     @Test
